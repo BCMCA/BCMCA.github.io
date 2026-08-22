@@ -9,23 +9,23 @@
    {
     "n": "7-13",
     "t": "Pain Management: non-opioid analgesia at the Specialist level",
-    "f": "7-13-specialist-clean.pdf",
+    "f": "7-13_Pain_Management_Specialist_NonOpioid_Analgesia.pdf",
     "note": "Specialist authorization appears as the S pictogram at treatment steps 6 and 7, per the state protocol pictogram convention."
    },
    {
     "n": "3-3",
     "t": "Respiratory Distress: Corticosteroids at the Specialist level",
-    "f": "3-3-specialist-clean.pdf"
+    "f": "3-3_Respiratory_Distress_Specialist_Corticosteroids.pdf"
    },
    {
     "n": "4-5",
     "t": "Pediatric Respiratory Distress: Corticosteroids at the Specialist level",
-    "f": "4-5-specialist-clean.pdf"
+    "f": "4-5_Pediatric_Respiratory_Distress_Specialist_Corticosteroids.pdf"
    },
    {
     "n": "1-6",
     "t": "Anaphylaxis: Corticosteroids at the Specialist level",
-    "f": "1-6-specialist-clean.pdf"
+    "f": "1-6_Anaphylaxis_Specialist_Corticosteroids.pdf"
    }
   ]
  },
@@ -39,12 +39,12 @@
    {
     "n": "7-32",
     "t": "Epinephrine Infusion Procedure",
-    "f": "7-32-epi-infusion-clean.pdf"
+    "f": "7-32_Epinephrine_Infusion.pdf"
    },
    {
     "n": "9-23R",
     "t": "Epinephrine: infusion preparation and dosing",
-    "f": "9-23R-epinephrine-clean.pdf"
+    "f": "9-23R_Epinephrine_Infusion_Modification.pdf"
    }
   ],
   "nested": {
@@ -53,7 +53,7 @@
     {
      "n": "8-17",
      "t": "Medical Control Privileges: Critical Care Paramedic",
-     "f": "8-17-privileges-clean.pdf"
+     "f": "8-17_Medical_Control_Privileges_Critical_Care_Paramedic.pdf"
     }
    ]
   }
