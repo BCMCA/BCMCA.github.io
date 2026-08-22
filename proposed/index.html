@@ -7,6 +7,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="/seal-96.png">
+<link rel="apple-touch-icon" href="/seal-192.png">
 <style>
 :root{--paper:#F7F5F0;--ink:#16181D;--navy:#14264D;--gold:#BF9E4C;--mut:#5A6172;--line:#DAD6CC;
 --open:#1E6B45;--serif:"Source Serif 4",Georgia,serif;--sans:"Public Sans",system-ui,sans-serif;
@@ -35,6 +37,7 @@ text-decoration:none;color:var(--ink)}
 .doc .dn{font:700 12px/1 var(--mono);color:#fff;background:var(--navy);border-left:3px solid var(--gold);
 padding:4px 7px;border-radius:3px;min-width:56px;text-align:center;flex:none}
 .doc .dt{font-size:15px;flex:1;color:var(--navy)}
+.doc .dnote{display:block;font-size:12.5px;color:var(--mut);margin-top:2px}
 .doc .pdf{font:600 11px/1 var(--sans);color:var(--mut);letter-spacing:.06em;flex:none}
 .nest{margin:10px 0 0 18px;padding-left:14px;border-left:2px solid var(--gold)}
 .nest .nlabel{font:700 11px/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin:0 0 2px}
@@ -62,6 +65,8 @@ a.back{display:inline-block;margin:34px 0 0;color:var(--navy);font-size:14px}
 <body>
 <div class="wrap">
 <header>
+  <a href="/"><img src="/seal.svg" alt="Berrien County Medical Control Authority"
+    style="width:84px;height:84px;margin:0 auto 18px;display:block"></a>
   <h1>Protocols Under Review</h1>
   <div class="mastrule"></div>
   <p class="lede">Before adopting a new or revised protocol, the Authority circulates the draft
@@ -80,7 +85,7 @@ system, and describe the concern or suggestion.</p>
 <script>
 const ACCESS_KEY="ae2fd3ca-561e-4299-be60-6f8b9f964961";
 function fmt(d){return new Date(d+"T12:00:00").toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'});}
-function docRow(d){return `<a class="doc" href="pdfs/${d.f}"><span class="dn">${d.n}</span><span class="dt">${d.t}</span><span class="pdf">PDF</span></a>`;}
+function docRow(d){return `<a class="doc" href="pdfs/${d.f}"><span class="dn">${d.n}</span><span class="dt">${d.t}${d.note?`<span class="dnote">${d.note}</span>`:''}</span><span class="pdf">PDF</span></a>`;}
 fetch('proposed.json').then(r=>r.json()).then(groups=>{
   if(!groups.length){document.getElementById('empty').style.display='block';return;}
   const now=new Date();
