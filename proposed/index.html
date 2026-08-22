@@ -3,163 +3,391 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Protocols Under Review | Berrien County MCA</title>
+<title>Proposed protocols | Berrien County MCA</title>
+<meta name="description" content="The Berrien County Medical Control Authority provides medical direction for the emergency medical services system of Berrien County, Michigan.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=Public+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@600;700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="icon" href="/seal-96.png">
 <link rel="apple-touch-icon" href="/seal-192.png">
 <style>
-:root{--paper:#F7F5F0;--ink:#16181D;--navy:#14264D;--gold:#BF9E4C;--mut:#5A6172;--line:#DAD6CC;
---open:#1E6B45;--serif:"Source Serif 4",Georgia,serif;--sans:"Public Sans",system-ui,sans-serif;
---mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace}
-*{box-sizing:border-box}
-body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 var(--sans)}
-a{color:var(--navy)}
-.wrap{max-width:720px;margin:0 auto;padding:0 22px 60px}
-.mast{background:var(--navy);text-align:center;
-padding:calc(env(safe-area-inset-top) + 30px) 22px 30px;position:relative;overflow:hidden}
-.mast::before{content:"";position:absolute;inset:-40%;opacity:.5;pointer-events:none;
-background:
- repeating-radial-gradient(circle at 18% -30%, transparent 0 32px, #1D3463 32px 33px),
- repeating-radial-gradient(circle at 82% -30%, transparent 0 32px, #1D3463 32px 33px)}
-.mast>*{position:relative}
-.mast img.seal{width:88px;height:88px;margin:0 auto 16px;display:block}
-h1{font:700 clamp(24px,5vw,34px)/1.15 var(--serif);color:#fff;margin:0}
-.mastrule{margin:18px auto 0;max-width:340px;border-top:2.5px solid #fff;position:relative}
-.mastrule::after{content:"";position:absolute;left:0;right:0;top:3px;border-top:1px solid var(--gold)}
-.lede{margin:18px auto 0;max-width:58ch;font-size:14px;color:var(--mut)}
-.lede .m{font-family:var(--mono);font-size:13px}
-.group{margin:34px 0 0;background:#fff;border:1px solid var(--line);border-left:4px solid var(--navy);
-border-radius:2px;padding:22px}
-.group .ti{font:600 22px/1.25 var(--serif);color:var(--navy);margin:0 0 6px}
-.status{font-size:13.5px;color:var(--mut);margin:0 0 4px}
-.status .m{font-family:var(--mono);font-size:12.5px;color:var(--ink)}
-.window{font-size:13.5px;color:var(--mut);margin:0 0 14px}
-.window .openlabel{color:var(--open);font-weight:600}
-.doclist{border-top:1px solid var(--line)}
-.doc{display:flex;gap:12px;align-items:center;padding:11px 2px;border-bottom:1px solid var(--line);
-text-decoration:none;color:var(--ink)}
-.doc:hover .dt,.doc:focus-visible .dt{text-decoration:underline}
-.doc .dn{font:700 12px/1 var(--mono);color:#fff;background:var(--navy);border-left:3px solid var(--gold);
-padding:4px 7px;border-radius:3px;min-width:56px;text-align:center;flex:none}
-.doc .dt{font-size:15px;flex:1;color:var(--navy)}
-.doc .dnote{display:block;font-size:12.5px;color:var(--mut);margin-top:2px}
-.doc .pdf{font:600 11px/1 var(--sans);color:var(--mut);letter-spacing:.06em;flex:none}
-.nest{margin:10px 0 0 18px;padding-left:14px;border-left:2px solid var(--gold)}
-.nest .nlabel{font:700 11px/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin:0 0 2px}
-.acts{margin:16px 0 0}
-.btn{display:inline-block;text-decoration:none;font:600 14px/1 var(--sans);padding:11px 16px;
-border-radius:6px;background:var(--navy);color:#fff;border:0;cursor:pointer}
-.formpanel{display:none;margin:18px 0 0;border-top:2px solid var(--navy);padding-top:16px}
-.formpanel.open{display:block}
-.formpanel label{display:block;font:600 12px/1 var(--sans);letter-spacing:.06em;text-transform:uppercase;
-color:var(--mut);margin:12px 0 5px}
-.formpanel input[type=text],.formpanel input[type=email],.formpanel textarea{width:100%;padding:10px 12px;
-font:15px/1.5 var(--sans);border:1px solid var(--line);border-radius:6px;background:var(--paper);color:var(--ink)}
-.formpanel textarea{min-height:120px;resize:vertical}
-.formpanel .send{margin-top:14px}
-.formnote{font-size:12.5px;color:var(--mut);margin:10px 0 0}
-.sent{display:none;margin:14px 0 0;padding:12px 14px;background:#EAF3EE;border-left:3px solid var(--open);
-font-size:14px;border-radius:2px}
-.hp{position:absolute;left:-9999px}
-.altline{margin:36px 0 0;font-size:14px;color:var(--mut);text-align:center}
-.empty{margin:44px 0 0;text-align:center;color:var(--mut);font-size:15px}
-a.back{display:inline-block;margin:34px 0 0;color:var(--navy);font-size:14px}
-:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+
+  :root{
+    --paper:#F7F5F0;
+    --ink:#1A1C1F;
+    --navy:#14264D;
+    --navy-dark:#0D1B36;
+    --gold:#BF9E4C;
+    --mut:#5A6172;
+    --line:#DAD6CC;
+    --serif:"Noto Serif",Georgia,serif;
+    --sans:"Public Sans",system-ui,sans-serif;
+    --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+    --side:280px;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;background:var(--paper);color:var(--ink);
+    font:15px/1.6 var(--sans);
+  }
+  a{color:var(--navy);}
+
+  /* ---- Full-width header: large logo straddling the gold line ---- */
+  header{
+    background:var(--navy);
+    position:relative;
+    padding-top:96px;
+    isolation:isolate;
+    overflow:visible;
+  }
+  .header-line{
+    position:absolute;left:0;right:0;bottom:0;
+    height:3px;background:var(--gold);
+    z-index:1;
+  }
+  .header-inner{
+    padding:0 40px 22px;
+    position:relative;
+    z-index:2;
+    min-height:20px;
+  }
+  .brand{
+    position:absolute;
+    left:40px;
+    top:100%;
+    transform:translateY(calc(-50% - 2px));
+    display:flex;align-items:center;text-decoration:none;color:inherit;
+    z-index:3;
+  }
+  .brand svg{width:190px;height:190px;flex-shrink:0;display:block;overflow:visible;}
+  .brand-text{
+    line-height:1;margin-left:-6px;
+    display:flex;align-items:baseline;gap:18px;
+  }
+  .brand-text .name{
+    font:700 32px/1 var(--serif);color:#fff;white-space:nowrap;
+    transform:translateY(-18px);display:block;
+  }
+  .brand-text .sub{
+    font:700 32px/1 var(--serif);color:var(--gold);
+    white-space:nowrap;
+    transform:translateY(-18px);
+  }
+
+  /* ---- Layout below header: sidebar + main ---- */
+  .layout{display:flex;}
+
+  aside{
+    width:var(--side);flex-shrink:0;
+    background:#F1EEE6;
+    border-right:1px solid var(--line);
+    padding:118px 26px 30px;
+  }
+  nav.side details{border-bottom:1px solid var(--line);padding:16px 0;}
+  nav.side details:first-child{padding-top:0;}
+  nav.side summary{
+    cursor:pointer;list-style:none;
+    font:700 13px var(--sans);color:var(--navy);letter-spacing:.05em;text-transform:uppercase;
+    display:flex;align-items:center;justify-content:space-between;gap:8px;
+  }
+  nav.side summary::-webkit-details-marker{display:none;}
+  nav.side summary .dot{width:5px;height:5px;flex-shrink:0;}
+  .current-dot{border-radius:50%;background:var(--gold);}
+  nav.side summary .chevron{font-size:11px;color:var(--mut);transition:transform .15s;}
+  nav.side details[open] summary .chevron{transform:rotate(180deg);}
+  nav.side .desc{font:400 12.5px/1.55 var(--sans);color:var(--mut);margin-top:7px;padding-left:13px;}
+  nav.side details > .desc{display:none;}
+  nav.side details[open] > .desc{display:block;}
+  nav.side summary:hover{color:var(--gold);}
+  nav.side a.desclink{color:var(--navy);font-weight:600;}
+
+  @media (min-width:761px){
+    nav.side details > .desc{display:block !important;}
+    nav.side summary{pointer-events:none;}
+    nav.side summary .chevron{display:none;}
+  }
+
+  /* ---- Main content ---- */
+  main{flex:1;min-width:0;}
+  .page-head{
+    max-width:640px;
+    padding:40px 40px 20px;
+    border-bottom:1px solid var(--line);
+  }
+  .page-head .eyebrow{
+    font:700 11px var(--sans);letter-spacing:.12em;text-transform:uppercase;
+    color:var(--navy);margin:0 0 8px;
+  }
+  .page-head h1{font:700 32px/1.2 var(--serif);color:var(--navy);margin:0 0 8px;}
+  .page-head p{font:400 14px/1.6 var(--sans);color:var(--mut);margin:0 0 8px;}
+
+  .content{max-width:640px;padding:6px 40px 50px;}
+
+  .announce-list .announce{padding:20px 0;border-bottom:1px solid var(--line);}
+  .announce-list .announce:first-child{padding-top:22px;}
+  .announce .date{
+    font:700 11.5px var(--sans);color:var(--gold);letter-spacing:.04em;
+    text-transform:uppercase;margin:0 0 6px;
+  }
+  .announce h2{font:700 20px/1.35 var(--serif);color:var(--navy);margin:0 0 7px;}
+  .announce p{font:400 14.5px/1.65 var(--sans);color:#3D4249;margin:0;}
+  .announce p a{color:var(--navy);}
+
+  /* ---- About page sections ---- */
+  .about-section{margin:0 0 30px;}
+  .about-section h2{
+    font:700 11px var(--sans);letter-spacing:.12em;text-transform:uppercase;
+    color:var(--gold);margin:0 0 10px;
+  }
+  .about-section p{font:400 15px/1.65 var(--sans);color:#3D4249;margin:0 0 12px;max-width:62ch;}
+  .about-section .m{font-family:var(--mono);font-size:13.5px;}
+
+  /* ---- Proposed protocols page ---- */
+  .group{margin:0 0 30px;padding-bottom:28px;border-bottom:1px solid var(--line);}
+  .group:last-child{border-bottom:none;}
+  .group .ti{font:700 22px/1.3 var(--serif);color:var(--navy);margin:0 0 6px;}
+  .status{font-size:13.5px;color:var(--mut);margin:0 0 4px;}
+  .status .m{font-family:var(--mono);font-size:12.5px;color:var(--ink);}
+  .window{font-size:13.5px;color:var(--mut);margin:0 0 14px;}
+  .window .openlabel{color:#1E6B45;font-weight:600;}
+  .doclist{border-top:1px solid var(--line);}
+  .doc{display:flex;gap:12px;align-items:center;padding:11px 2px;border-bottom:1px solid var(--line);
+    text-decoration:none;color:var(--ink);}
+  .doc:hover .dt,.doc:focus-visible .dt{text-decoration:underline;}
+  .doc .dn{font:700 12px/1 var(--mono);color:#fff;background:var(--navy);border-left:3px solid var(--gold);
+    padding:4px 7px;border-radius:3px;min-width:56px;text-align:center;flex:none;}
+  .doc .dt{font-size:15px;flex:1;color:var(--navy);}
+  .doc .dnote{display:block;font-size:12.5px;color:var(--mut);margin-top:2px;}
+  .doc .pdf{font:600 11px/1 var(--sans);color:var(--mut);letter-spacing:.06em;flex:none;}
+  .nest{margin:10px 0 0 18px;padding-left:14px;border-left:2px solid var(--gold);}
+  .nest .nlabel{font:700 11px/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin:0 0 8px;}
+  .acts{margin:16px 0 0;}
+  .btn{display:inline-block;text-decoration:none;font:600 14px/1 var(--sans);padding:11px 16px;
+    border-radius:6px;background:var(--navy);color:#fff;border:0;cursor:pointer;}
+  .formpanel{display:none;margin:18px 0 0;border-top:2px solid var(--navy);padding-top:16px;}
+  .formpanel.open{display:block;}
+  .formpanel label{display:block;font:600 12px/1 var(--sans);letter-spacing:.06em;text-transform:uppercase;
+    color:var(--mut);margin:12px 0 5px;}
+  .formpanel input[type=text],.formpanel input[type=email],.formpanel textarea{width:100%;padding:10px 12px;
+    font:15px/1.5 var(--sans);border:1px solid var(--line);border-radius:6px;background:var(--paper);color:var(--ink);}
+  .formpanel textarea{min-height:120px;resize:vertical;}
+  .formpanel .send{margin-top:14px;}
+  .formnote{font-size:12.5px;color:var(--mut);margin:10px 0 0;}
+  .sent{display:none;margin:14px 0 0;padding:12px 14px;background:#EAF3EE;border-left:3px solid #1E6B45;
+    font-size:14px;border-radius:2px;}
+  .hp{position:absolute;left:-9999px;}
+  .altline{margin:10px 0 0;font-size:14px;color:var(--mut);}
+  .empty{margin:20px 0 0;color:var(--mut);font-size:15px;}
+
+  footer{
+    background:var(--navy-dark);
+    padding:20px 40px 34px;
+    color:#B9C2D6;
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;
+    font:400 12.5px var(--sans);
+  }
+  footer a{color:#B9C2D6;}
+
+  @media (max-width:760px){
+    .layout{flex-direction:column;}
+    aside{width:100%;border-right:none;border-bottom:1px solid var(--line);padding-top:26px;}
+    header{padding-top:2px;padding-bottom:2px;}
+    .header-inner{display:none;}
+    .brand{position:static;transform:none;padding:0;}
+    .brand svg{width:100px;height:100px;}
+    .brand-text{display:block;margin-left:-2px;}
+    .brand-text .name{font-size:22px;transform:none;}
+    .brand-text .sub{
+      font:600 12px/1 var(--sans);letter-spacing:.02em;text-transform:uppercase;
+      margin-top:2px;transform:none;
+    }
+  }
+
 </style>
 </head>
 <body>
-<header class="mast">
-  <a href="/"><img class="seal" src="/seal.svg" alt="Berrien County Medical Control Authority"></a>
-  <h1>Protocols Under Review</h1>
-  <div class="mastrule"></div>
-  </header>
-<div class="wrap">
-<p class="lede">Before adopting a new or revised protocol, the Authority circulates the draft
-  for review and comment by all significantly affected persons within the Berrien County EMS
-  system, as required by <span class="m">MCL 333.20919(3)(a)</span>. Comments are accepted for
-  60 days from the posting date shown on each draft.</p>
-<main id="list"></main>
-<div class="empty" id="empty" style="display:none">No protocols are currently posted for review.</div>
-<p class="altline">Comments may also be submitted to
-<a href="mailto:comments@berrienmca.org">comments@berrienmca.org</a>.
-Identify the protocol by number and title, state your affiliation with the Berrien County EMS
-system, and describe the concern or suggestion.</p>
-<a class="back" href="/">&larr; Berrien County MCA</a>
+
+<header>
+  <div class="header-line"></div>
+  <div class="header-inner"></div>
+  <a class="brand" href="/">
+<svg viewBox="0 0 900 900" xmlns="http://www.w3.org/2000/svg" aria-label="Seal of the Berrien County Medical Control Authority">
+
+<circle cx="450" cy="450" r="398" fill="none" stroke="#BF9E4C" stroke-width="7"/><circle cx="450" cy="450" r="386" fill="none" stroke="#BF9E4C" stroke-width="2"/><circle cx="450" cy="450" r="244" fill="none" stroke="#BF9E4C" stroke-width="3.5"/><circle cx="450" cy="450" r="252" fill="none" stroke="#BF9E4C" stroke-width="1.5"/><path d="M 112 426.6 L 126.0 450 L 112 473.4 L 98.0 450 Z" fill="#BF9E4C"/><path d="M 788 426.6 L 802.0 450 L 788 473.4 L 774.0 450 Z" fill="#BF9E4C"/><text x="242.9" y="230.2" transform="rotate(-43.3 242.9 230.2)" font-family="DejaVu Sans" font-weight="bold" font-size="47" fill="#BF9E4C" text-anchor="middle">B</text>
+<text x="270.0" y="207.5" transform="rotate(-36.6 270.0 207.5)" font-family="DejaVu Sans" font-weight="bold" font-size="47" fill="#BF9E4C" text-anchor="middle">E</text>
+<text x="299.5" y="188.2" transform="rotate(-29.9 299.5 188.2)" font-family="DejaVu Sans" font-weight="bold" font-size="47" fill="#BF9E4C" text-anchor="middle">R</text>
+<text x="331.1" y="172.4" transform="rotate(-23.2 331.1 172.4)" font-family="DejaVu Sans" font-weight="bold" font-size="47" fill="#BF9E4C" text-anchor="middle">R</text>
+<text x="364.3" y="160.4" transform="rotate(-16.5 364.3 160.4)" font-family="DejaVu Sans" font-weight="bold" font-size="47" fill="#BF9E4C" text-anchor="middle">I</text>
+<text x="398.6" y="152.4" transform="rotate(-9.8 398.6 152.4)" font-family="DejaVu Sans" font-weight="bold" font-size="47" fill="#BF9E4C" text-anchor="middle">E</text>
+<text x="433.7" y="148.4" transform="rotate(-3.1 433.7 148.4)" font-family="DejaVu Sans" font-weight="bold" font-size="47" fill="#BF9E4C" text-anchor="middle">N</text>
+<text x="504.0" y="152.9" transform="rotate(10.3 504.0 152.9)" font-family="DejaVu Sans" font-weight="bold" font-size="47" fill="#BF9E4C" text-anchor="middle">C</text>
+<text x="538.3" y="161.2" transform="rotate(17.0 538.3 161.2)" font-family="DejaVu Sans" font-weight="bold" font-size="47" fill="#BF9E4C" text-anchor="middle">O</text>
+<text x="571.4" y="173.5" transform="rotate(23.7 571.4 173.5)" font-family="DejaVu Sans" font-weight="bold" font-size="47" fill="#BF9E4C" text-anchor="middle">U</text>
+<text x="602.9" y="189.5" transform="rotate(30.4 602.9 189.5)" font-family="DejaVu Sans" font-weight="bold" font-size="47" fill="#BF9E4C" text-anchor="middle">N</text>
+<text x="632.2" y="209.2" transform="rotate(37.1 632.2 209.2)" font-family="DejaVu Sans" font-weight="bold" font-size="47" fill="#BF9E4C" text-anchor="middle">T</text>
+<text x="659.1" y="232.1" transform="rotate(43.8 659.1 232.1)" font-family="DejaVu Sans" font-weight="bold" font-size="47" fill="#BF9E4C" text-anchor="middle">Y</text><text x="163.0" y="612.8" transform="rotate(420.4 163.0 612.8)" font-family="DejaVu Sans" font-weight="bold" font-size="38" fill="#BF9E4C" text-anchor="middle">M</text>
+<text x="178.3" y="637.2" transform="rotate(415.4 178.3 637.2)" font-family="DejaVu Sans" font-weight="bold" font-size="38" fill="#BF9E4C" text-anchor="middle">E</text>
+<text x="195.6" y="660.2" transform="rotate(410.4 195.6 660.2)" font-family="DejaVu Sans" font-weight="bold" font-size="38" fill="#BF9E4C" text-anchor="middle">D</text>
+<text x="214.9" y="681.6" transform="rotate(405.4 214.9 681.6)" font-family="DejaVu Sans" font-weight="bold" font-size="38" fill="#BF9E4C" text-anchor="middle">I</text>
+<text x="236.0" y="701.2" transform="rotate(400.4 236.0 701.2)" font-family="DejaVu Sans" font-weight="bold" font-size="38" fill="#BF9E4C" text-anchor="middle">C</text>
+<text x="258.7" y="718.9" transform="rotate(395.4 258.7 718.9)" font-family="DejaVu Sans" font-weight="bold" font-size="38" fill="#BF9E4C" text-anchor="middle">A</text>
+<text x="282.8" y="734.5" transform="rotate(390.4 282.8 734.5)" font-family="DejaVu Sans" font-weight="bold" font-size="38" fill="#BF9E4C" text-anchor="middle">L</text>
+<text x="334.8" y="759.2" transform="rotate(380.4 334.8 759.2)" font-family="DejaVu Sans" font-weight="bold" font-size="38" fill="#BF9E4C" text-anchor="middle">C</text>
+<text x="362.2" y="768.1" transform="rotate(375.4 362.2 768.1)" font-family="DejaVu Sans" font-weight="bold" font-size="38" fill="#BF9E4C" text-anchor="middle">O</text>
+<text x="390.2" y="774.5" transform="rotate(370.4 390.2 774.5)" font-family="DejaVu Sans" font-weight="bold" font-size="38" fill="#BF9E4C" text-anchor="middle">N</text>
+<text x="418.7" y="778.5" transform="rotate(365.4 418.7 778.5)" font-family="DejaVu Sans" font-weight="bold" font-size="38" fill="#BF9E4C" text-anchor="middle">T</text>
+<text x="447.5" y="780.0" transform="rotate(360.4 447.5 780.0)" font-family="DejaVu Sans" font-weight="bold" font-size="38" fill="#BF9E4C" text-anchor="middle">R</text>
+<text x="476.3" y="779.0" transform="rotate(355.4 476.3 779.0)" font-family="DejaVu Sans" font-weight="bold" font-size="38" fill="#BF9E4C" text-anchor="middle">O</text>
+<text x="504.8" y="775.4" transform="rotate(350.4 504.8 775.4)" font-family="DejaVu Sans" font-weight="bold" font-size="38" fill="#BF9E4C" text-anchor="middle">L</text>
+<text x="560.5" y="760.9" transform="rotate(340.4 560.5 760.9)" font-family="DejaVu Sans" font-weight="bold" font-size="38" fill="#BF9E4C" text-anchor="middle">A</text>
+<text x="587.2" y="750.1" transform="rotate(335.4 587.2 750.1)" font-family="DejaVu Sans" font-weight="bold" font-size="38" fill="#BF9E4C" text-anchor="middle">U</text>
+<text x="612.8" y="737.0" transform="rotate(330.4 612.8 737.0)" font-family="DejaVu Sans" font-weight="bold" font-size="38" fill="#BF9E4C" text-anchor="middle">T</text>
+<text x="637.2" y="721.7" transform="rotate(325.4 637.2 721.7)" font-family="DejaVu Sans" font-weight="bold" font-size="38" fill="#BF9E4C" text-anchor="middle">H</text>
+<text x="660.2" y="704.4" transform="rotate(320.4 660.2 704.4)" font-family="DejaVu Sans" font-weight="bold" font-size="38" fill="#BF9E4C" text-anchor="middle">O</text>
+<text x="681.6" y="685.1" transform="rotate(315.4 681.6 685.1)" font-family="DejaVu Sans" font-weight="bold" font-size="38" fill="#BF9E4C" text-anchor="middle">R</text>
+<text x="701.2" y="664.0" transform="rotate(310.4 701.2 664.0)" font-family="DejaVu Sans" font-weight="bold" font-size="38" fill="#BF9E4C" text-anchor="middle">I</text>
+<text x="718.9" y="641.3" transform="rotate(305.4 718.9 641.3)" font-family="DejaVu Sans" font-weight="bold" font-size="38" fill="#BF9E4C" text-anchor="middle">T</text>
+<text x="734.5" y="617.2" transform="rotate(300.4 734.5 617.2)" font-family="DejaVu Sans" font-weight="bold" font-size="38" fill="#BF9E4C" text-anchor="middle">Y</text>
+<g transform="translate(450,450)">
+  <g fill="#BF9E4C"><rect x="-33" y="-192" width="66" height="384" rx="7"/><g transform="rotate(60)"><rect x="-33" y="-192" width="66" height="384" rx="7"/></g><g transform="rotate(120)"><rect x="-33" y="-192" width="66" height="384" rx="7"/></g></g>
+  <line x1="0" y1="-158" x2="0" y2="158" stroke="#14264D" stroke-width="13" stroke-linecap="round"/>
+  <path d="M -20 -136 C 6 -148, 26 -138, 24 -116 C 22 -94, -24 -86, -24 -60 C -24 -34, 24 -28, 24 -2 C 24 24, -24 30, -24 56 C -24 82, 24 88, 24 112 C 24 130, 8 142, -10 138" fill="none" stroke="#14264D" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="-24" cy="-140" r="10" fill="#14264D"/>
+</g>
+</svg>
+    <div class="brand-text">
+      <div class="name">Berrien County</div>
+      <div class="sub">Medical Control Authority</div>
+    </div>
+  </a>
+</header>
+
+<div class="layout">
+  <aside>
+    <nav class="side">
+      <details>
+        <summary><span style="display:flex;align-items:center;gap:8px;"><span class="dot"></span>Active protocols</span><span class="chevron">&#9662;</span></summary>
+        <div class="desc">Up-to-date active protocols for all EMS agencies and personnel practicing under Berrien County medical control. Searchable by title and full text, with patient report lines for receiving emergency departments, and available offline. Current compilation: August 15, 2026. <a class="desclink" href="/protocols/">Open the protocol reference &rarr;</a></div>
+      </details>
+      <details>
+        <summary><span style="display:flex;align-items:center;gap:8px;"><span class="dot current-dot"></span>Proposed protocols</span><span class="chevron">&#9662;</span></summary>
+        <div class="desc">Draft protocols circulated for review and comment before adoption, as required by MCL 333.20919(3)(a). Each posting shows its 60 day comment period.</div>
+      </details>
+      <details>
+        <summary><span style="display:flex;align-items:center;gap:8px;"><span class="dot"></span>Announcements</span><span class="chevron">&#9662;</span></summary>
+        <div class="desc">Protocol adoptions, implementation dates, and system notices from the Authority.</div>
+      </details>
+      <details>
+        <summary><span style="display:flex;align-items:center;gap:8px;"><span class="dot"></span>About</span><span class="chevron">&#9662;</span></summary>
+        <div class="desc">Medical direction for the emergency medical services system of Berrien County, Michigan. <a class="desclink" href="/about/">Read more &rarr;</a></div>
+      </details>
+    </nav>
+  </aside>
+
+  <main>
+    <div class="page-head">
+      <p class="eyebrow">Under review</p>
+      <h1>Proposed protocols</h1>
+      <p>Before adopting a new or revised protocol, the Authority circulates the draft for review and comment by all significantly affected persons within the Berrien County EMS system, as required by <span class="m" style="font-family:var(--mono);">MCL 333.20919(3)(a)</span>. Comments are accepted for 60 days from the posting date shown on each draft.</p>
+    </div>
+    <div class="content">
+      <div id="list"></div>
+      <div class="empty" id="empty" style="display:none">No protocols are currently posted for review.</div>
+      <p class="altline">Comments may also be submitted to <a href="mailto:comments@berrienmca.org">comments@berrienmca.org</a>. Identify the protocol by number and title, state your affiliation with the Berrien County EMS system, and describe the concern or suggestion.</p>
+    </div>
+  </main>
 </div>
+
+<footer>
+  <span>Berrien County Medical Control Authority</span>
+  <a href="mailto:info@berrienmca.org">info@berrienmca.org</a>
+</footer>
+
 <script>
-const ACCESS_KEY="ae2fd3ca-561e-4299-be60-6f8b9f964961";
-function fmt(d){return new Date(d+"T12:00:00").toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'});}
-function docRow(d){return `<a class="doc" href="pdfs/${d.f}"><span class="dn">${d.n}</span><span class="dt">${d.t}${d.note?`<span class="dnote">${d.note}</span>`:''}</span><span class="pdf">PDF</span></a>`;}
-fetch('proposed.json').then(r=>r.json()).then(groups=>{
-  if(!groups.length){document.getElementById('empty').style.display='block';return;}
-  const now=new Date();
-  document.getElementById('list').innerHTML=groups.map((g,i)=>{
-    let windowHtml='';
-    if(g.posted){
-      const posted=new Date(g.posted+"T12:00:00");
-      const dl=new Date(posted); dl.setDate(dl.getDate()+60);
-      const open=g.comment&&now<=dl;
-      windowHtml=`<p class="window">Posted <span class="m">${fmt(g.posted)}</span> &middot; `+
-        (open?`<span class="openlabel">Open for comment</span> through <span class="m">${fmt(dl.toISOString().slice(0,10))}</span>`
-             :`Comment period ${g.comment?'closed '+fmt(dl.toISOString().slice(0,10)):'not applicable'}`)+`</p>`;
+  (function(){
+    var items = document.querySelectorAll('nav.side details');
+    function sync(){
+      var desktop = window.innerWidth >= 761;
+      items.forEach(function(d){
+        if(desktop){ d.setAttribute('open',''); }
+        else { d.removeAttribute('open'); }
+      });
     }
-    const nested=g.nested?`<div class="nest"><p class="nlabel">${g.nested.label}</p><div class="doclist">${g.nested.docs.map(docRow).join('')}</div></div>`:'';
-    const form=g.comment?`
-    <div class="acts"><button class="btn" onclick="togglePanel(${i})" id="btn${i}">Submit a comment</button></div>
-    <div class="formpanel" id="panel${i}">
-      <form onsubmit="return sendComment(event,${i})">
-        <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
-        <label for="nm${i}">Name</label>
-        <input type="text" id="nm${i}" name="name" required autocomplete="name">
-        <label for="af${i}">Affiliation within the Berrien County EMS system</label>
-        <input type="text" id="af${i}" name="affiliation" required>
-        <label for="pr${i}">Protocol</label>
-        <input type="text" id="pr${i}" name="protocol" value="${g.heading}">
-        <label for="cm${i}">Comment</label>
-        <textarea id="cm${i}" name="comment" required></textarea>
-        <label for="em${i}">Email for response (optional)</label>
-        <input type="email" id="em${i}" name="email" autocomplete="email">
-        <button class="btn send" type="submit" id="send${i}">Send comment</button>
-        <p class="formnote">Comments are received by the Authority and reviewed before implementation.</p>
-      </form>
-      <div class="sent" id="sent${i}">Your comment has been received by the Authority. Thank you.</div>
-    </div>`:'';
-    return `<section class="group" id="g${i}">
-      <h2 class="ti">${g.heading}</h2>
-      <p class="status">${g.status}</p>
-      ${windowHtml}
-      <div class="doclist">${g.docs.map(docRow).join('')}</div>
-      ${nested}${form}
-    </section>`;
-  }).join('');
-  const q=new URLSearchParams(location.search).get('comment');
-  if(q!==null){
-    const idx=groups.findIndex(g=>g.id===q);
-    if(idx>=0){togglePanel(idx);document.getElementById('g'+idx).scrollIntoView();}
+    sync();
+    window.addEventListener('resize', sync);
+  })();
+  const ACCESS_KEY="ae2fd3ca-561e-4299-be60-6f8b9f964961";
+  function fmt(d){return new Date(d+"T12:00:00").toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'});}
+  function docRow(d){return `<a class="doc" href="/proposed/pdfs/${d.f}"><span class="dn">${d.n}</span><span class="dt">${d.t}${d.note?`<span class="dnote">${d.note}</span>`:''}</span><span class="pdf">PDF</span></a>`;}
+  fetch('/proposed/proposed.json').then(r=>r.json()).then(groups=>{
+    if(!groups.length){document.getElementById('empty').style.display='block';return;}
+    const now=new Date();
+    document.getElementById('list').innerHTML=groups.map((g,i)=>{
+      let windowHtml='';
+      if(g.posted){
+        const posted=new Date(g.posted+"T12:00:00");
+        const dl=new Date(posted); dl.setDate(dl.getDate()+60);
+        const open=g.comment&&now<=dl;
+        windowHtml=`<p class="window">Posted <span class="m">${fmt(g.posted)}</span> &middot; `+
+          (open?`<span class="openlabel">Open for comment</span> through <span class="m">${fmt(dl.toISOString().slice(0,10))}</span>`
+               :`Comment period ${g.comment?'closed '+fmt(dl.toISOString().slice(0,10)):'not applicable'}`)+`</p>`;
+      }
+      const nested=g.nested?`<div class="nest"><p class="nlabel">${g.nested.label}</p><div class="doclist">${g.nested.docs.map(docRow).join('')}</div></div>`:'';
+      const form=g.comment?`
+      <div class="acts"><button class="btn" onclick="togglePanel(${i})" id="btn${i}">Submit a comment</button></div>
+      <div class="formpanel" id="panel${i}">
+        <form onsubmit="return sendComment(event,${i})">
+          <input type="checkbox" name="botcheck" class="hp" tabindex="-1" autocomplete="off">
+          <label for="nm${i}">Name</label>
+          <input type="text" id="nm${i}" name="name" required autocomplete="name">
+          <label for="af${i}">Affiliation within the Berrien County EMS system</label>
+          <input type="text" id="af${i}" name="affiliation" required>
+          <label for="pr${i}">Protocol</label>
+          <input type="text" id="pr${i}" name="protocol" value="${g.heading}">
+          <label for="cm${i}">Comment</label>
+          <textarea id="cm${i}" name="comment" required></textarea>
+          <label for="em${i}">Email for response (optional)</label>
+          <input type="email" id="em${i}" name="email" autocomplete="email">
+          <button class="btn send" type="submit" id="send${i}">Send comment</button>
+          <p class="formnote">Comments are received by the Authority and reviewed before implementation.</p>
+        </form>
+        <div class="sent" id="sent${i}">Your comment has been received by the Authority. Thank you.</div>
+      </div>`:'';
+      return `<section class="group" id="g${i}">
+        <h2 class="ti">${g.heading}</h2>
+        <p class="status">${g.status}</p>
+        ${windowHtml}
+        <div class="doclist">${g.docs.map(docRow).join('')}</div>
+        ${nested}${form}
+      </section>`;
+    }).join('');
+    const q=new URLSearchParams(location.search).get('comment');
+    if(q!==null){
+      const idx=groups.findIndex(g=>g.id===q);
+      if(idx>=0){togglePanel(idx);document.getElementById('g'+idx).scrollIntoView();}
+    }
+  }).catch(()=>{document.getElementById('empty').style.display='block';});
+  function togglePanel(i){document.getElementById('panel'+i).classList.toggle('open');}
+  async function sendComment(e,i){
+    e.preventDefault();
+    const f=e.target, btn=document.getElementById('send'+i);
+    btn.disabled=true; btn.textContent='Sending...';
+    const data=Object.fromEntries(new FormData(f).entries());
+    data.access_key=ACCESS_KEY;
+    data.subject='Protocol comment: '+data.protocol;
+    data.from_name='BCMCA Protocol Comments';
+    try{
+      const r=await fetch('https://api.web3forms.com/submit',{method:'POST',
+        headers:{'Content-Type':'application/json',Accept:'application/json'},
+        body:JSON.stringify(data)});
+      const j=await r.json();
+      if(j.success){f.style.display='none';document.getElementById('sent'+i).style.display='block';}
+      else{btn.disabled=false;btn.textContent='Send comment';alert('The comment could not be sent. Please email comments@berrienmca.org.');}
+    }catch(err){btn.disabled=false;btn.textContent='Send comment';
+      alert('The comment could not be sent. Please email comments@berrienmca.org.');}
+    return false;
   }
-}).catch(()=>{document.getElementById('empty').style.display='block';});
-function togglePanel(i){document.getElementById('panel'+i).classList.toggle('open');}
-async function sendComment(e,i){
-  e.preventDefault();
-  const f=e.target, btn=document.getElementById('send'+i);
-  btn.disabled=true; btn.textContent='Sending...';
-  const data=Object.fromEntries(new FormData(f).entries());
-  data.access_key=ACCESS_KEY;
-  data.subject='Protocol comment: '+data.protocol;
-  data.from_name='BCMCA Protocol Comments';
-  try{
-    const r=await fetch('https://api.web3forms.com/submit',{method:'POST',
-      headers:{'Content-Type':'application/json',Accept:'application/json'},
-      body:JSON.stringify(data)});
-    const j=await r.json();
-    if(j.success){f.style.display='none';document.getElementById('sent'+i).style.display='block';}
-    else{btn.disabled=false;btn.textContent='Send comment';alert('The comment could not be sent. Please email comments@berrienmca.org.');}
-  }catch(err){btn.disabled=false;btn.textContent='Send comment';
-    alert('The comment could not be sent. Please email comments@berrienmca.org.');}
-  return false;
-}
 </script>
+
 </body>
 </html>

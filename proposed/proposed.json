@@ -46,16 +46,33 @@
     "t": "Epinephrine: infusion preparation and dosing",
     "f": "9-23R_Epinephrine_Infusion_Modification.pdf"
    }
-  ],
-  "nested": {
-   "label": "Credentialing",
-   "docs": [
-    {
-     "n": "8-17",
-     "t": "Medical Control Privileges: Critical Care Paramedic",
-     "f": "8-17_Medical_Control_Privileges_Critical_Care_Paramedic.pdf"
-    }
-   ]
-  }
+  ]
+ },
+ {
+  "id": "credentialing",
+  "heading": "Medical Control Credentialing",
+  "status": "Approved by the Board; pending Quality Assurance Task Force review, September 2026",
+  "posted": "2026-08-22",
+  "comment": true,
+  "docs": [
+   {
+    "n": "8-17",
+    "t": "Medical Control Privileges: Critical Care Paramedic",
+    "f": "8-17_Medical_Control_Privileges_Critical_Care_Paramedic.pdf"
+   }
+  ]
+ },
+ {
+  "id": "blood",
+  "heading": "Blood Administration",
+  "status": "Approved by MDHHS July 24, 2026; effective September 1, 2026. Agency accreditation and distribution framework pending.",
+  "comment": false,
+  "docs": [
+   {
+    "n": "7-31",
+    "t": "Blood Product Administration",
+    "f": "7-31_Blood_Administration.pdf"
+   }
+  ]
  }
 ]
