@@ -1,0 +1,60 @@
+[
+ {
+  "id": "aemt",
+  "heading": "EMT Specialist Scope: Ketorolac and Corticosteroids",
+  "status": "Approved by the Board; pending Quality Assurance Task Force review, September 2026",
+  "posted": "2026-08-22",
+  "comment": true,
+  "docs": [
+   {
+    "n": "7-13",
+    "t": "Pain Management: Ketorolac at the Specialist level",
+    "f": "7-13_Pain_Management_Specialist_NonOpioid_Analgesia.pdf"
+   },
+   {
+    "n": "3-3",
+    "t": "Respiratory Distress: Corticosteroids at the Specialist level",
+    "f": "3-3_Respiratory_Distress_Specialist_Corticosteroids.pdf"
+   },
+   {
+    "n": "4-5",
+    "t": "Pediatric Respiratory Distress: Corticosteroids at the Specialist level",
+    "f": "4-5_Pediatric_Respiratory_Distress_Specialist_Corticosteroids.pdf"
+   },
+   {
+    "n": "1-6",
+    "t": "Anaphylaxis: Corticosteroids at the Specialist level",
+    "f": "1-6_Anaphylaxis_Specialist_Corticosteroids.pdf"
+   }
+  ]
+ },
+ {
+  "id": "epi",
+  "heading": "Epinephrine Infusion: Critical Care Paramedic",
+  "status": "Approved by the Board August 14, 2026; submitted to MDHHS for approval",
+  "posted": "2026-08-22",
+  "comment": false,
+  "docs": [
+   {
+    "n": "7-32",
+    "t": "Epinephrine Infusion Procedure",
+    "f": "7-32_Epinephrine_Infusion.pdf"
+   },
+   {
+    "n": "9-23R",
+    "t": "Epinephrine: infusion preparation and dosing",
+    "f": "9-23R_Epinephrine_Infusion_Modification.pdf"
+   }
+  ],
+  "nested": {
+   "label": "Credentialing",
+   "docs": [
+    {
+     "n": "8-17",
+     "t": "Medical Control Privileges: Critical Care Paramedic",
+     "f": "8-17_Medical_Control_Privileges_Critical_Care_Paramedic.pdf"
+    }
+   ]
+  }
+ }
+]
