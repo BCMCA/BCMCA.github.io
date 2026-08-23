@@ -57,7 +57,7 @@
   "docs": [
    {
     "n": "8-17",
-    "t": "Medical Control Privileges: Critical Care Paramedic",
+    "t": "Medical Control Privileges",
     "f": "8-17_Medical_Control_Privileges_Critical_Care_Paramedic.pdf"
    }
   ]
@@ -65,14 +65,15 @@
  {
   "id": "blood",
   "heading": "Blood Administration",
-  "status": "Approved by MDHHS July 24, 2026; effective September 1, 2026. Agency accreditation and distribution framework pending.",
-  "comment": false,
+  "status": "Approved by MDHHS July 24, 2026. Agency accreditation and distribution framework pending.",
+  "comment": true,
   "docs": [
    {
     "n": "7-31",
     "t": "Blood Product Administration",
     "f": "7-31_Blood_Administration.pdf"
    }
-  ]
+  ],
+  "posted": "2026-08-22"
  }
 ]
