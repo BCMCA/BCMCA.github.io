@@ -61,7 +61,9 @@
   }
   .brand svg{width:190px;height:190px;flex-shrink:0;display:block;overflow:visible;}
   .brand-text{
-    line-height:1;margin-left:-6px;
+    line-height:1;
+    /* start the wordmark at the content column: sidebar width minus seal width, from the brand's 40px offset */
+    margin-left:calc(var(--side) - 190px);
     display:flex;align-items:baseline;gap:18px;
   }
   .brand-text .name{
