@@ -23,7 +23,7 @@
     --serif:"Noto Serif",Georgia,serif;
     --sans:"Public Sans",system-ui,sans-serif;
     --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
-    --side:280px;
+    --side:322px;
   }
   *{box-sizing:border-box;}
   body{
@@ -98,6 +98,7 @@
   nav.side summary .chevron{font-size:11px;color:var(--mut);transition:transform .15s;}
   nav.side details[open] summary .chevron{transform:rotate(180deg);}
   nav.side .desc{font:400 12.5px/1.55 var(--sans);color:var(--mut);margin-top:7px;padding-left:13px;}
+  nav.side .compdate{color:#8A6410;font-weight:700;white-space:nowrap;}
   nav.side details > .desc{display:none;}
   nav.side details[open] > .desc{display:block;}
   nav.side summary:hover{color:var(--gold);}
@@ -274,7 +275,7 @@
     <nav class="side">
       <details>
         <summary><span style="display:flex;align-items:center;gap:8px;"><span class="dot"></span><a class="navlink" href="/protocols/">Active protocols</a></span><span class="chevron">&#9662;</span></summary>
-        <div class="desc">Up-to-date active protocols for all EMS agencies and personnel practicing under Berrien County medical control. Searchable by title and full text, with patient report lines for receiving emergency departments, and available offline. Current compilation: August 15, 2026. <a class="desclink" href="/protocols/">Open the protocol reference &rarr;</a></div>
+        <div class="desc">Up-to-date active protocols for all EMS agencies and personnel practicing under Berrien County medical control. Searchable by title and full text, with patient report lines for receiving emergency departments, and available offline. <span class="compdate">Current compilation: August 15, 2026.</span> <a class="desclink" href="/protocols/">Open the protocol reference &rarr;</a></div>
       </details>
       <details>
         <summary><span style="display:flex;align-items:center;gap:8px;"><span class="dot current-dot"></span><a class="navlink" href="/proposed/">Proposed protocols</a></span><span class="chevron">&#9662;</span></summary>
