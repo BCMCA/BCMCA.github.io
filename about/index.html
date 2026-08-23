@@ -101,6 +101,11 @@
   nav.side summary:hover{color:var(--gold);}
   nav.side a.desclink{color:var(--navy);font-weight:600;}
 
+  nav.side summary a.navlink{color:inherit;text-decoration:none;pointer-events:none;}
+  @media (min-width:761px){
+    nav.side summary a.navlink{pointer-events:auto;cursor:pointer;}
+    nav.side summary a.navlink:hover{color:var(--gold);}
+  }
   @media (min-width:761px){
     nav.side details > .desc{display:block !important;}
     nav.side summary{pointer-events:none;}
@@ -266,19 +271,19 @@
   <aside>
     <nav class="side">
       <details>
-        <summary><span style="display:flex;align-items:center;gap:8px;"><span class="dot"></span>Active protocols</span><span class="chevron">&#9662;</span></summary>
+        <summary><span style="display:flex;align-items:center;gap:8px;"><span class="dot"></span><a class="navlink" href="/protocols/">Active protocols</a></span><span class="chevron">&#9662;</span></summary>
         <div class="desc">Up-to-date active protocols for all EMS agencies and personnel practicing under Berrien County medical control. Searchable by title and full text, with patient report lines for receiving emergency departments, and available offline. Current compilation: August 15, 2026. <a class="desclink" href="/protocols/">Open the protocol reference &rarr;</a></div>
       </details>
       <details>
-        <summary><span style="display:flex;align-items:center;gap:8px;"><span class="dot"></span>Proposed protocols</span><span class="chevron">&#9662;</span></summary>
+        <summary><span style="display:flex;align-items:center;gap:8px;"><span class="dot"></span><a class="navlink" href="/proposed/">Proposed protocols</a></span><span class="chevron">&#9662;</span></summary>
         <div class="desc">Draft protocols circulated for review and comment before implementation, as required by MCL 333.20919(3)(a). Each posting shows its 60 day comment period. <a class="desclink" href="/proposed/">View proposed protocols &rarr;</a></div>
       </details>
       <details>
-        <summary><span style="display:flex;align-items:center;gap:8px;"><span class="dot"></span>Announcements</span><span class="chevron">&#9662;</span></summary>
+        <summary><span style="display:flex;align-items:center;gap:8px;"><span class="dot"></span><a class="navlink" href="/">Announcements</a></span><span class="chevron">&#9662;</span></summary>
         <div class="desc">Protocol adoptions, implementation dates, and system notices from the Authority. <a class="desclink" href="/">View announcements &rarr;</a></div>
       </details>
       <details>
-        <summary><span style="display:flex;align-items:center;gap:8px;"><span class="dot current-dot"></span>About</span><span class="chevron">&#9662;</span></summary>
+        <summary><span style="display:flex;align-items:center;gap:8px;"><span class="dot current-dot"></span><a class="navlink" href="/about/">About</a></span><span class="chevron">&#9662;</span></summary>
         <div class="desc">Medical direction for the emergency medical services system of Berrien County, Michigan.</div>
       </details>
     </nav>
